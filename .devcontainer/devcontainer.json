@@ -1,0 +1,8 @@
+{
+	"name": "devenv-4girls-python",
+	"dockerComposeFile": [
+		"docker-compose.yml"
+	],
+	"service": "app",
+	"workspaceFolder": "/workspace"
+}

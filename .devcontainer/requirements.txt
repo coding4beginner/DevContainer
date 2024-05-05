@@ -1,0 +1,11 @@
+django
+djangorestframework
+django-extensions
+
+pytz
+
+uvicorn
+
+autopep8
+black
+ruff
