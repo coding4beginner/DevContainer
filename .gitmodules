@@ -1,3 +1,6 @@
 [submodule "Einsteiger/WebDevelopment-for-Beginners"]
 	path = Einsteiger/WebDevelopment-for-Beginners
 	url = https://github.com/coding4girls/WebDevelopment-for-Beginners
+[submodule "Einsteiger/Working-with-Django"]
+	path = Einsteiger/Working-with-Django
+	url = https://github.com/coding4girls/Working-with-Django
