@@ -106,6 +106,12 @@ RUN PATH=${USR_HOME}/.venv/bin:${USR_HOME}/.deno/bin:$PATH: deno jupyter --insta
 
 
 # -------------------------------------------------------------------------------------------------
+# VSCODE
+
+RUN  mkdir -p  /workspace/.vscode
+COPY vscode/*  /workspace/.vscode
+
+# -------------------------------------------------------------------------------------------------
 COPY bin/*   ${USR_HOME}/bin
 
 RUN sudo chown -R ${USR_NAME}:${GRP_NAME} ${USR_HOME}/bin

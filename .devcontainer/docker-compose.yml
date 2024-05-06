@@ -6,14 +6,13 @@ services:
             context: .
             dockerfile: Dockerfile
 
-        container_name: devenv-codetogether
+        container_name: devenv-code4beginner
         volumes:
             - ..:/HERE
             - ../Courses:/workspace/courses
             - ../Lessons:/workspace/lessons
             - ../Notebooks:/workspace/notebooks
             - ../Repositories:/workspace/repositories
-            
             
         ports:
             - 8000:8000

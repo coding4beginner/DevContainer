@@ -1,5 +1,5 @@
 {
-	"name": "devenv-codetogether",
+	"name": "devenv-code4beginner",
 	"dockerComposeFile": [
 		"docker-compose.yml"
 	],

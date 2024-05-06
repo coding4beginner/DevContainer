@@ -1,0 +1,17 @@
+{
+    "recommendations": [
+        "charliermarsh.ruff",
+        "firefox-devtools.vscode-firefox-debug",
+        "ms-azuretools.vscode-docker",
+        "ms-ossdata.vscode-postgresql",
+        "ms-python.debugpy",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter-keymap",
+        "ms-vscode-remote.remote-containers",
+        "ms-vscode.live-server",
+        "mtxr.sqltools",
+        "onatm.open-in-new-window",
+        "peterschmalfeldt.explorer-exclude"
+    ]
+  }
