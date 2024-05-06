@@ -106,7 +106,6 @@ RUN PATH=${USR_HOME}/.venv/bin:${USR_HOME}/.deno/bin:$PATH: deno jupyter --insta
 
 
 # -------------------------------------------------------------------------------------------------
-RUN mkdir    ${USR_HOME}/bin
 COPY bin/*   ${USR_HOME}/bin
 
 RUN sudo chown -R ${USR_NAME}:${GRP_NAME} ${USR_HOME}/bin
