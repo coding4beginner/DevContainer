@@ -9,9 +9,9 @@
         "ms-python.vscode-pylance",
         "ms-toolsai.jupyter-keymap",
         "ms-vscode-remote.remote-containers",
+        "ms-vsliveshare.vsliveshare",
         "mtxr.sqltools",
         "onatm.open-in-new-window",
-        "peterschmalfeldt.explorer-exclude",
-
+        "peterschmalfeldt.explorer-exclude"
     ]
   }

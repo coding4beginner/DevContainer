@@ -6,10 +6,11 @@ services:
             context: .
             dockerfile: Dockerfile
 
-        container_name: devenv-coding4girls
+        container_name: devenv-codetogether
         volumes:
             - ..:/HERE
             - ../Courses:/workspace/courses
+            - ../Lessons:/workspace/lessons
             - ../Notebooks:/workspace/notebooks
             - ../Repositories:/workspace/repositories
             

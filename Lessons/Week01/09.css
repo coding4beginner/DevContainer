@@ -1,0 +1,7 @@
+.fullscreen-background {
+  background-image: url("09.webp");
+  height: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,5 +1,5 @@
 {
-	"name": "devenv-4girls-python",
+	"name": "devenv-codetogether",
 	"dockerComposeFile": [
 		"docker-compose.yml"
 	],
