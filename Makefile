@@ -11,7 +11,7 @@ run:
 
 
 commit:
-	git commit -m $MESSAGE
+	git commit -m ${MESSAGE}
 
 push:
 	git push
