@@ -1,9 +1,9 @@
-[submodule "Einsteiger/WebDevelopment-for-Beginners"]
-	path = Einsteiger/WebDevelopment-for-Beginners
+[submodule "Courses/WebDevelopment-for-Beginners"]
+	path = Courses/WebDevelopment-for-Beginners
 	url = https://github.com/coding4girls/WebDevelopment-for-Beginners
-[submodule "Einsteiger/Working-with-Django"]
-	path = Einsteiger/Working-with-Django
+[submodule "Courses/Working-with-Django"]
+	path = Courses/Working-with-Django
 	url = https://github.com/coding4girls/Working-with-Django
-[submodule "Einsteiger/Course-Learn-Python"]
-	path = Einsteiger/Course-Learn-Python
+[submodule "Courses/Course-Learn-Python"]
+	path = Courses/Course-Learn-Python
 	url = https://github.com/coding4girls/Course-Learn-Python

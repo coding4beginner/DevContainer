@@ -8,7 +8,11 @@ services:
 
         container_name: devenv-coding4girls
         volumes:
-            - ../:/workspace/playground
+            - ..:/HERE
+            - ../Courses:/workspace/courses
+            - ../Notebooks:/workspace/notebooks
+            - ../Repositories:/workspace/repositories
+            
             
         ports:
             - 8000:8000

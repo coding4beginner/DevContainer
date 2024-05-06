@@ -1,1 +1,1 @@
-jupyter --ip='*' --NotebookApp.token='' --NotebookApp.password=''
+jupyter-lab --ip='*' --NotebookApp.token='' --NotebookApp.password=''

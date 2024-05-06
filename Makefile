@@ -9,6 +9,8 @@ build:
 run:
 	docker run  -v ${HERE}/workspace:/workspace -it ${CONTAINER}
 
+add:
+	git add .
 
 commit:
 	git commit -m ${MESSAGE}
