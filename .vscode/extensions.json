@@ -9,6 +9,7 @@
         "ms-vscode-remote.remote-containers",
         "mtxr.sqltools",
         "onatm.open-in-new-window",
-        "peterschmalfeldt.explorer-exclude"
+        "peterschmalfeldt.explorer-exclude",
+        "ms-toolsai.jupyter-keymap"
     ]
   }

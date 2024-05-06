@@ -8,5 +8,6 @@
         "**/Thumbs.db": true,
         ".gitattributes": true
     },
-    "explorerExclude.backup": {}
+    "explorerExclude.backup": {},
+    "git.ignoreLimitWarning": true
 }

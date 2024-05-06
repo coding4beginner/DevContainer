@@ -4,3 +4,6 @@
 [submodule "Einsteiger/Working-with-Django"]
 	path = Einsteiger/Working-with-Django
 	url = https://github.com/coding4girls/Working-with-Django
+[submodule "Einsteiger/Course-Learn-Python"]
+	path = Einsteiger/Course-Learn-Python
+	url = https://github.com/coding4girls/Course-Learn-Python
