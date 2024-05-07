@@ -1,0 +1,21 @@
+language: elixir
+elixir:
+  - 1.14.0
+
+otp_release:
+  - 25.0
+
+script:
+  - mix format --check-formatted
+  - mix deps.get
+  - mix test
+
+  # check for any trailing whitespace
+  - "! git grep ' $' -- \\*.exs"
+
+sudo: false
+
+cache:
+  directories:
+    - _build
+    - deps
