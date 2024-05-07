@@ -22,14 +22,14 @@ RUN echo $TZ > /etc/timezone
 FROM builder as base
 
 RUN    apt-get update
-RUN    apt-get install -y tzdata                                                \
-    && rm /etc/localtime                                                        \
-    && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime                           \
-    && dpkg-reconfigure -f noninteractive tzdata                                \
+RUN    apt     install --yes tzdata \
+    && rm /etc/localtime \
+    && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
+    && dpkg-reconfigure -f noninteractive tzdata \
     && apt-get clean
 
 RUN apt install --yes build-essential lsb-release curl sudo git vim unzip
-RUN apt install --assume-yes software-properties-common
+RUN apt install --yes software-properties-common
 
 # -------------------------------------------------------------------------------------------------
 # WITH-USER
@@ -67,14 +67,33 @@ RUN npm install -g ijavascript
 RUN echo 'export PATH="$HOME/bin:$PATH"\n'                      >>${USR_HOME}/.bashrc
 
 # -------------------------------------------------------------------------------------------------
+# DOTNET
+# -------------------------------------------------------------------------------------------------
+FROM with-nodejs as with-dotnet
+
+RUN    apt-get update \
+    && apt     install --yes dotnet-sdk-8.0
+
+
+# -------------------------------------------------------------------------------------------------
+# PHP
+# -------------------------------------------------------------------------------------------------
+FROM with-dotnet as with-php
+
+RUN    apt-get update \
+    && apt     install --yes php libapache2-mod-php
+
+# -------------------------------------------------------------------------------------------------
 # DJANGO
 EXPOSE 8000
 
+# -------------------------------------------------------------------------------------------------
+FROM with-php as with-apps
 
 # =================================================================================================
 # USER
 # =================================================================================================
-FROM with-nodejs as final
+FROM with-apps as final
 
 USER user
 
@@ -85,29 +104,24 @@ WORKDIR /workspace
 # PYTHON
 RUN  python -m venv ${USR_HOME}/.venv
 RUN  echo '\n\n. /home/user/.venv/bin/activate\n'               >>${USR_HOME}/.bashrc
-
 COPY requirements.txt requirements.txt
 RUN  ${USR_HOME}/.venv/bin/pip install -r requirements.txt
 
 # -------------------------------------------------------------------------------------------------
 # DENO
 RUN curl -fsSL https://deno.land/install.sh | sh
-
 RUN echo '\n\n# Deno\nexport DENO_INSTALL="/home/user/.deno"\n' >>${USR_HOME}/.bashrc
 RUN echo 'export PATH="$DENO_INSTALL/bin:$PATH"\n'              >>${USR_HOME}/.bashrc
-
 
 # -------------------------------------------------------------------------------------------------
 # JUPYTER
 RUN sudo npm install ijavascript
-RUN PATH=${USR_HOME}/.venv/bin:$PATH:                      ijsinstall --install=local
-
+RUN PATH=${USR_HOME}/.venv/bin:$PATH:                       ijsinstall --install=local
 RUN PATH=${USR_HOME}/.venv/bin:${USR_HOME}/.deno/bin:$PATH: deno jupyter --install
 
 
 # -------------------------------------------------------------------------------------------------
 # VSCODE
-
 RUN  mkdir -p  /workspace/.vscode
 COPY vscode/*  /workspace/.vscode
 
@@ -116,5 +130,12 @@ COPY bin/*   ${USR_HOME}/bin
 
 RUN sudo chown -R ${USR_NAME}:${GRP_NAME} ${USR_HOME}/bin
 RUN sudo chmod +x ${USR_HOME}/bin/*
+
+# -------------------------------------------------------------------------------------------------
+# CLEANUP
+# -------------------------------------------------------------------------------------------------
+RUN    sudo apt update \
+    && sudo apt upgrade --yes
+
 
 CMD ["bash", "-l"]

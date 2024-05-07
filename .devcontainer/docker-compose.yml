@@ -10,6 +10,7 @@ services:
         volumes:
             - ..:/HERE
             - ../Courses:/workspace/courses
+            - ../Playground:/workspace/playground
             - ../Lessons:/workspace/lessons
             - ../Notebooks:/workspace/notebooks
             - ../Repositories:/workspace/repositories
