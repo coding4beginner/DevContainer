@@ -39,7 +39,7 @@ function getMove(board){
     $.ajax(
       {
           type:"GET",
-          url: "/ttt/move/",
+          url: "/game/move/",
           
           dataType: 'json',
           data:{

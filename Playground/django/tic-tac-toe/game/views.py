@@ -19,7 +19,7 @@ from os import system
 
 def index(request):
     context = {}
-    return render(request, 'ttt/index.html',context)
+    return render(request, 'game/index.html',context)
 
 
 def move(request):

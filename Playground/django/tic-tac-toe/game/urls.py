@@ -7,5 +7,5 @@ from django.urls import include, path
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('ttt/move/', views.move , name='move'),
+    path('game/move/', views.move , name='move'),
 ]

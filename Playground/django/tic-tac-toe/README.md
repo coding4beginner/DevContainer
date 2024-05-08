@@ -5,13 +5,13 @@ The algorithm works by finding the next move leading to the desired outcome. The
 
 
 #### Django apps:
-1.  Mysite - Default django app.
-2.  ttt - Logic for receiving board states, move generation, and returning board state.
+1.  mysite - Default django app.
+2.  game - Logic for receiving board states, move generation, and returning board state.
 #### Install:
 
 ```bash
-git clone https://github.com/nealmick/ttt
-cd ttt
+git clone https://github.com/nealmick/game
+cd game
 pip install -r requirements.txt
 python3 manage.py runserver
 ```
