@@ -119,17 +119,14 @@ RUN sudo npm install ijavascript
 RUN PATH=${USR_HOME}/.venv/bin:$PATH:                       ijsinstall --install=local
 RUN PATH=${USR_HOME}/.venv/bin:${USR_HOME}/.deno/bin:$PATH: deno jupyter --install
 
-
 # -------------------------------------------------------------------------------------------------
 # VSCODE
 RUN  mkdir -p  /workspace/.vscode
 COPY vscode/*  /workspace/.vscode
-
-# -------------------------------------------------------------------------------------------------
 COPY bin/*   ${USR_HOME}/bin
 
-RUN sudo chown -R ${USR_NAME}:${GRP_NAME} ${USR_HOME}/bin
-RUN sudo chmod +x ${USR_HOME}/bin/*
+RUN sudo chown -R ${USR_NAME}:${GRP_NAME} ${USR_HOME}/bin    /workspace
+RUN sudo chmod +x                         ${USR_HOME}/bin/*
 
 # -------------------------------------------------------------------------------------------------
 # CLEANUP
