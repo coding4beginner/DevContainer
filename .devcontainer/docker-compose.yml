@@ -8,10 +8,9 @@ services:
 
         container_name: coding4beginner
         volumes:
-            - ../Playground:/workspace/playground
-            - ../Lessons:/workspace/lessons
-            - ../../Workspace:/workspace/mywork
-            - ../../Courses:/workspace/courses
+            - ../../Lessons:/coding4beginner/lessons
+            - ../../Workspace:/coding4beginner/workspace
+            - ../../Courses:/coding4beginner/courses
         ports:
             - 8000:8000
             - 8008:8080

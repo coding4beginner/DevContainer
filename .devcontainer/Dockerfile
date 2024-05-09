@@ -97,8 +97,8 @@ FROM with-apps as final
 
 USER user
 
-VOLUME [ "/workspace" ]
-WORKDIR /workspace
+VOLUME [ "/coding4beginner" ]
+WORKDIR /coding4beginner
 
 # -------------------------------------------------------------------------------------------------
 # PYTHON
@@ -121,11 +121,11 @@ RUN PATH=${USR_HOME}/.venv/bin:${USR_HOME}/.deno/bin:$PATH: deno jupyter --insta
 
 # -------------------------------------------------------------------------------------------------
 # VSCODE
-RUN  mkdir -p  /workspace/.vscode
-COPY vscode/*  /workspace/.vscode
+RUN  mkdir -p  /coding4beginner/.vscode
+COPY vscode/*  /coding4beginner/.vscode
 COPY bin/*   ${USR_HOME}/bin
 
-RUN sudo chown -R ${USR_NAME}:${GRP_NAME} ${USR_HOME}/bin    /workspace
+RUN sudo chown -R ${USR_NAME}:${GRP_NAME} ${USR_HOME}/bin    /coding4beginner
 RUN sudo chmod +x                         ${USR_HOME}/bin/*
 
 # -------------------------------------------------------------------------------------------------
