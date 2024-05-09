@@ -6,17 +6,15 @@ services:
             context: .
             dockerfile: Dockerfile
 
-        container_name: devenv-code4beginner
+        container_name: coding4beginner
         volumes:
-            - ../../Course:/workspace/course
-            - ../Courses:/workspace/courses
             - ../Playground:/workspace/playground
             - ../Lessons:/workspace/lessons
-            - ../Notebooks:/workspace/notebooks
-            - ../Repositories:/workspace/repositories
-            
+            - ../../Workspace:/workspace/mywork
+            - ../../Courses:/workspace/courses
         ports:
             - 8000:8000
+            - 8008:8080
 
         environment:
             - DJANGO_DEBUG=1

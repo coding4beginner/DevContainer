@@ -1,0 +1,14 @@
+/workspace/playground/dotnet/bin/Debug/net8.0/dotnet
+/workspace/playground/dotnet/bin/Debug/net8.0/dotnet.deps.json
+/workspace/playground/dotnet/bin/Debug/net8.0/dotnet.runtimeconfig.json
+/workspace/playground/dotnet/bin/Debug/net8.0/dotnet.dll
+/workspace/playground/dotnet/bin/Debug/net8.0/dotnet.pdb
+/workspace/playground/dotnet/obj/Debug/net8.0/dotnet.GeneratedMSBuildEditorConfig.editorconfig
+/workspace/playground/dotnet/obj/Debug/net8.0/dotnet.AssemblyInfoInputs.cache
+/workspace/playground/dotnet/obj/Debug/net8.0/dotnet.AssemblyInfo.cs
+/workspace/playground/dotnet/obj/Debug/net8.0/dotnet.csproj.CoreCompileInputs.cache
+/workspace/playground/dotnet/obj/Debug/net8.0/dotnet.dll
+/workspace/playground/dotnet/obj/Debug/net8.0/refint/dotnet.dll
+/workspace/playground/dotnet/obj/Debug/net8.0/dotnet.pdb
+/workspace/playground/dotnet/obj/Debug/net8.0/dotnet.genruntimeconfig.cache
+/workspace/playground/dotnet/obj/Debug/net8.0/ref/dotnet.dll
