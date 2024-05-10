@@ -8,6 +8,7 @@ services:
 
         container_name: coding4beginner
         volumes:
+            - ./bin:/coding4beginner/bin
             - ../../Lessons:/coding4beginner/lessons
             - ../../Workspace:/coding4beginner/workspace
             - ../../Courses:/coding4beginner/courses
