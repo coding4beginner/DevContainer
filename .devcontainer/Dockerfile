@@ -125,8 +125,9 @@ RUN  mkdir -p  /coding4beginner/.vscode
 COPY vscode/*  /coding4beginner/.vscode
 COPY bin/*     /coding4beginner/bin
 
+RUN sudo mkdir  -p                        ${USR_HOME}/bin
 RUN sudo chown -R ${USR_NAME}:${GRP_NAME} ${USR_HOME}/bin    /coding4beginner
-RUN sudo chmod +x                         ${USR_HOME}/bin/*
+RUN sudo chmod -R +x                      ${USR_HOME}/bin
 
 # -------------------------------------------------------------------------------------------------
 # CLEANUP
