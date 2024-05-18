@@ -1,0 +1,8 @@
+clone https://github.com/coding4beginner/Course_WebDeveloper-Lessons Lessons
+git clone https://github.com/coding4beginner/Workspace Workspace
+
+mkdir Courses
+git clone https://github.com/coding4beginner/Course_CSS-Tutorial-Grid Courses/CSS-Tutorial-Grid
+git clone https://github.com/coding4beginner/Course_Learning-Django Courses/Learning-Django
+git clone https://github.com/coding4beginner/Course_Learning-Python Courses/Learning-Python
+
