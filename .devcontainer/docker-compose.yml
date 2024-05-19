@@ -8,9 +8,9 @@ services:
 
         container_name: coding4beginner
         volumes:
-            - ../../Lessons:/coding4beginner/lessons
-            - ../../Workspace:/coding4beginner/workspace
-            - ../../Courses:/coding4beginner/courses
+            - ../../Lessons:/c4b/lessons
+            - ../../Workspace:/c4b/workspace
+            - ../../Courses:/c4b/courses
 
             - ../..:/ROOT
         ports:

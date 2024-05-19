@@ -64,7 +64,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
 RUN apt install -y nodejs
 RUN npm install -g ijavascript
 
-RUN echo 'export PATH="$HOME/bin:$PATH:/coding4beginner/bin\n"' >>${USR_HOME}/.bashrc
+RUN echo 'export PATH="$HOME/bin:$PATH:/c4b/bin\n"' >>${USR_HOME}/.bashrc
 
 # -------------------------------------------------------------------------------------------------
 # DOTNET
@@ -97,8 +97,8 @@ FROM with-apps as final
 
 USER user
 
-VOLUME [ "/coding4beginner" ]
-WORKDIR /coding4beginner
+VOLUME [ "/c4b" ]
+WORKDIR /c4b
 
 # -------------------------------------------------------------------------------------------------
 # PYTHON
@@ -121,12 +121,12 @@ RUN PATH=${USR_HOME}/.venv/bin:${USR_HOME}/.deno/bin:$PATH: deno jupyter --insta
 
 # -------------------------------------------------------------------------------------------------
 # VSCODE
-RUN  mkdir -p  /coding4beginner/.vscode
-COPY vscode/*  /coding4beginner/.vscode
-COPY bin/*     /coding4beginner/bin
+RUN  mkdir -p  /c4b/.vscode
+COPY vscode/*  /c4b/.vscode
+COPY bin/*     /c4b/bin
 
 RUN sudo mkdir  -p                        ${USR_HOME}/bin
-RUN sudo chown -R ${USR_NAME}:${GRP_NAME} ${USR_HOME}/bin    /coding4beginner
+RUN sudo chown -R ${USR_NAME}:${GRP_NAME} ${USR_HOME}/bin    /c4b
 RUN sudo chmod -R +x                      ${USR_HOME}/bin
 
 # -------------------------------------------------------------------------------------------------
