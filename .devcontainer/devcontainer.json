@@ -4,5 +4,5 @@
 		"docker-compose.yml"
 	],
 	"service": "app",
-	"workspaceFolder": "/coding4beginner"
+	"workspaceFolder": "/c4b"
 }

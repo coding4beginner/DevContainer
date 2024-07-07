@@ -28,8 +28,10 @@ RUN    apt     install --yes tzdata \
     && dpkg-reconfigure -f noninteractive tzdata \
     && apt-get clean
 
-RUN apt install --yes build-essential lsb-release curl sudo git vim unzip
+RUN apt install --yes build-essential lsb-release curl sudo git vim unzip file
 RUN apt install --yes software-properties-common
+
+RUN apt install --yes nasm
 
 # -------------------------------------------------------------------------------------------------
 # WITH-USER
